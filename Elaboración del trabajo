@@ -1,0 +1,25 @@
+. Integración de los trabajos prácticos experimentales
+El Componente Práctico 1 reúne los modelos desarrollados para MoviGo en las dos prácticas anteriores. La integración conserva el caso de estudio y relaciona las funcionalidades generales del sistema con el escenario específico de asignación de un viaje.
+El trabajo práctico experimental 1 aporta la delimitación del sistema, la identificación de actores, la descripción del caso «Solicitar viaje» y el diagrama de casos de uso. El trabajo práctico experimental 2 incorpora los diagramas de comunicación y secuencia que representan un fragmento exitoso de ese caso.
+Trabajo de origen	Producto integrado	Aporte al modelamiento
+Práctico experimental 1	Diagrama de casos de uso	Representa las funcionalidades de MoviGo y su relación con los actores externos.
+
+
+
+. Diagrama de comunicación
+6.1. Descripción del escenario
+El diagrama de comunicación representa la colaboración entre el pasajero, el sistema MoviGo y el conductor durante la asignación exitosa de un viaje. Su propósito es mostrar qué participantes intercambian mensajes y cómo se relacionan.
+El escenario comienza después de que el pasajero ha definido su ubicación y destino y ha consultado la tarifa aproximada. Se considera que existe un conductor disponible y que este acepta la solicitud.
+Figura 2
+ Nota. Recuperado del trabajo práctico experimental 2, elaborado por el equipo de trabajo. 
+6.2. Mensajes representados
+N.º	Emisor	Receptor	Mensaje
+1	Pasajero	Sistema MoviGo	Confirmar solicitud.
+2	Sistema MoviGo	Sistema MoviGo	Buscar conductores disponibles.
+3	Sistema MoviGo	Conductor	Enviar solicitud de viaje.
+4	Conductor	Sistema MoviGo	Aceptar solicitud de viaje.
+5	Sistema MoviGo	Pasajero	Confirmar asignación y mostrar datos.
+6.3. Interpretación
+MoviGo actúa como coordinador de la interacción. Recibe la confirmación del pasajero, realiza la búsqueda y envía la solicitud al conductor. Cuando recibe la aceptación, registra la asignación y comunica el resultado al pasajero.
+El segundo mensaje constituye una autointeracción, porque representa una operación interna del sistema. No se modela comunicación directa entre el pasajero y el conductor dentro de este fragmento.
+La distribución espacial destaca los vínculos entre participantes; el orden de las acciones se reconoce mediante la numeración de los mensajes.
